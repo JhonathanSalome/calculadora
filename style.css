@@ -1,0 +1,118 @@
+body { /* configure(configuração) do body */
+    margin: 0%; /* margin área externa ao objeto, margin(centralização) da página */
+    padding: 0%; /* espaço interno do objeto */
+    font-family: Calibri, 'Trebuchet MS', sans-serif; /* família de fontes */
+    font-size: 62.5%; /* tamanho da fonte */
+    background-color: rgb(227, 231, 235); /* cor no fundo */
+    box-sizing: border-box; /* cria um box dentro da borda */
+}
+.main { /* formatação de class .(ponto)main(menu) */
+    position: relative; /* posição(absoluta ou relativa), para que ele possa passar por cima dos documentos, no caso eu tenho o "nav", e detro do "nav", tenho o "ul", configuranto a posições, que vão mexer no tpo e na esquerda, a posição relativa, vou mexer no ul, ou seja, só vou conseguir mexer nele dentro do seu conterner.
+    Se for a posição absoluta, vou estravaza isso, ai vou está me referindo a posição absoluta dentro do site.
+    
+    #posição relativa: ele fica dentro do conterner
+    #posição absoluta: ele fica livre pelo site */
+    font-size: 1.2rem; /* tamanho da fonte */
+    background-color: rgb(227, 231, 235); /* cor no fundo */
+    margin: 90px auto; /* margin área externa ao objeto, margin(centralização) da página */
+    min-height: 550px; /* altura mínima de um elemento */
+    width: 350px; /* define a largura dela */
+    border-radius: 20px; /* adicionar cantos arredondados */
+    text-align: center; /* text-align(alinhamento de texto), center(centro) */
+    box-shadow: -14px -14px 20px rgb(238, 244, 247), 10px 10px 20px rgb(119, 117, 117); /* colocar uma discreta sobra, dislocamento lateral e vertical, espalhamento e a color(cor) rgba(119, 177, 117) */
+}
+.wrapper { /* formatação de class .(ponto)wrapper(embrulho) */
+    padding: 30px; /* configure o padding interno(espaço interno do objeto) */
+}
+.screen { /* formatação de class .(ponto)screen(tela) */
+    word-wrap: break-word; /* permite que palavras longas possam ser quebradas e embrulhadas para a próxima linha */
+    direction: ltr; /* direction, defina a direção do texto, ltr, direção do texto vai da esquerda para a direita */
+    padding-top: 5px; /* define a altura da área de preenchimento na parte superior de um elemento */
+    padding-right: 10px; /* espaço interno da direita de 10 pixes */
+    text-align: end; /* alinhamento de texto define o alinhamento horizontal do conteúdo de nível embutido dentro de um elemento de bloco ou caixa de célula de tabela */
+    font-size: 1.2rem; /* tamanho da fonte com 30 pontos */
+    color: rgb(73, 72, 72); /* cor */
+    box-sizing: border-box; /* cria um box dentro da borda */
+    display: block; /* display(define se um elemento é tratado como um bloco ou elemento inline), block(bloquear) */
+    margin: 30px auto; /* margin área externa ao objeto, margin(centralização) da página */
+    width: 250px; /* define a largura dela */
+    min-height: 60px; /* altura mínima de um elemento */
+    border-radius: 5px; /* adicionar cantos arredondados */
+    font-weight: 900; /* define o peso (ou negrito) da fonte */
+    background-color: rgb(233, 236, 240); /* cor no fundo */
+    border: 0px; /* borda, largura da borda 0 pixes */
+    box-shadow: inset 1px 1px 7px rgb(105, 104, 104), inset -10px -10px 3px white; /* sombra, horizontal, vertical, espalhamento, cor */
+}
+/* sempre que for um id: # */
+#screen-top { /* configure, screen-top(tela the cima) */
+    font-size: 1.1rem; /* tamanho da font */
+}
+/* sempre que for um id: # */
+#screen-bottom { /* configure, screen-bottom(tela the botão) */
+    margin-top: -4px; /* espaço externo, margim de cima */
+    font-size: 1.5rem; /* tamanho da font */
+}
+.calculator-buttons { /* formatação de class .(ponto)calculator-buttons(calcular botões) */
+    position: relative; /* posição relativa */
+    height: 75%; /* altura de 75% */
+    margin-top: 50px; /* margin-top(espaço fora da box, espaço externo do topo) com 50 pixes */
+}
+.colums { /* formatação de class .(ponto)colums(colunas) */
+    display: flex; /* define o tamanho inicial que um item deve ter antes que o espaço ao seu redor seja distribuído */
+    justify-content: space-between; /* justify-content(define como o navegador distribui espaço entre e ao redor de itens de conteúdo ao longo do eixo principal de um contêiner flexível e o eixo embutido de um contêiner de grade), space-between(distribua os itens uniformemente, o primeiro item está alinhado com o início, o último está alinhado com o final)   */
+    width: 100%; /* define a largura dela */
+}
+.btn { /* formatação de class .(ponto)btn(botão) */
+    box-sizing: border-box; /* cria um box dentro da borda */
+    text-align: center; /* alinhamento de texto define o alinhamento horizontal do conteúdo de nível embutido dentro de um elemento de bloco ou caixa de célula de tabela */
+    padding-top: 0px; /* define a altura da área de preenchimento na parte superior de um elemento */
+    cursor: pointer; /* cursor(define o cursor do mouse, para mostrar quando o ponteiro do mouse está sobre um elemento), pointer(ponteiro que indica um link) */
+    box-shadow: -14px -14px 10px rgb(238, 244, 247), 5px 5px 5px rgb(119, 117, 117); /* colocar uma discreta sobra, dislocamento lateral e vertical, espalhamento e a color(cor) rgba */
+    width: 50px; /* define a largura dela */
+    height: 50px; /* altura the 50px */
+    border: none; /* borda, largura da borda */
+    border-radius: 9px; /* adicionar cantos arredondados */
+    font-size: 1rem; /* tamanho da font */
+    margin: 10px; /* margin área externa ao objeto, margin(centralização) da página */
+}
+.black { /* formatação de class .(ponto)black(preto) */
+    background-color: black;  /* cor no fundo */
+    color: white; /* cor */
+}
+@media screen and (max-width: 400px) { /* @media(regra é usada em consultas de mídia para aplicar estilos diferentes para diferentes tipos/dispositivos de mídia), screen(tela) and(e), max-width(define a largura máxima de um elemento), limitar os estilos a dispositivos com uma tela, você pode encadear os recursos de mídia para o tipo de mídia */
+    .btn { /* formatação de class .(ponto)btn(botão) */
+        width: 40px; /* define a largura dela */
+        padding-top: 0%; /* define a altura da área de preenchimento na parte superior de um elemento */
+        height: 40px; /* altura the 40px */
+        margin: 8px; /* margin área externa ao objeto, margin(centralização) da página */
+        font-size: 0.9rem; /* tamanho da font */
+        box-shadow: -10px -10px 5px rgb(238, 244, 247), 5px 5px 4px rgb(119, 117, 117); /* colocar uma discreta sobra, dislocamento lateral e vertical, espalhamento e a color(cor) rgba */
+    }
+    .calculator-buttons { /* formatação de class .(ponto)calculator-buttons(calcular botões) */
+        height: 400px; /* altura the 400px */
+        width: 200px; /* define a largura dela */
+        margin: 0%; /* margin área externa ao objeto, margin(centralização) da página */
+    }
+    .main { /* formatação de class .(ponto)main(menu) */
+        margin: 50px auto; /* margin área externa ao objeto, margin(centralização) da página */
+        height: 430px; /* altura de 430px */
+        width: 250px; /* define a largura dela */
+    }
+    .screen { /* formatação de class .(ponto)screen(tela) */
+        padding-top: 5px; /* define a altura da área de preenchimento na parte superior de um elemento */
+        padding-right: 10px; /* define a largura da área de preenchimento à direita de um elemento */
+        margin: 20px auto; /* margin área externa ao objeto, margin(centralização) da página */
+        width: 190px; /* define a largura dela */
+        height: 50px; /* altura de 50px */
+    }
+    /* sempre que for um id: # */
+    #screen-top { /* configure, screen-top(tela the cima) */
+        font-size: 1rem; /* tamanho da font */
+    }
+    /* sempre que for um id: # */
+    #screen-bottom { /* configure, screen-buttom(tela the bottom) */
+        margin-top: -4px; /* margin-top(espaço fora da box, espaço externo do topo) */
+        font-size: 1.3rem; /* tamanho da font */
+        overflow: hidden; /* overflow(especifica quando o conteúdo de um elemento de nível de bloco deve ser cortado, exibido com barras de rolagem ou se transborda do elemento), hidden(conteúdo é cortado e nenhuma barra de rolagem é exibida) */
+    }
+}

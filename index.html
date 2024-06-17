@@ -1,0 +1,87 @@
+<!DOCTYPE html> <!-- html foca em semântica, que é o significado das coisas -->
+<html lang="en" >  <!-- lang(atributo) dentro do <html>tag, para declarar a linguagem do página da web, isso destina-se a ajudar os motores de busca e navegadores -->
+<head>
+  <meta charset="UTF-8"> <!-- charset é conjunto de caracteres latino -->
+  <title>Calculadora</title> <!-- título da página -->
+  <link rel="stylesheet" href="./style.css"> <!-- 
+    faz uma ligação entre o file html eo css, link parâmetro rel(for falar qual é a categoria the file que está sendo linkando) como stysheet(folha de estilo), type(modelo, tipo) como text(texto)/css, href(hypertext reference, referência de hipertexto) qual file será carregado -->
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- mate(tag), define metadados sobre um documento em HTML, metadados são dados (informações) sobre dados, name(atributo), especifica um nome para um elemento HTML, viewport(é a área visível do usuário de uma página da web), definir a viewport para fazer o seu site ter uma boa aparência em todos os dispositivos,
+
+    content(atributo), usado para fornecer os valores relacionados ao atributo http-equiv ou name, pode ser associado ao elemento <meta>, isso dá instruções ao navegador sobre como para controlar as dimensões e dimensionamento da página, width=device-widthA parte define a largura da página para seguir a largura de tela do dispositivo (que varia de acordo com o dispositivo), initial-scale=1.0, define o nível de zoom inicial quando a página é carregada pela primeira vez pelo navegador -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- mate(tag), define metadados sobre um documento em HTML, metadados são dados (informações) sobre dados, http equiv, é um pragma diretiva, i.e. normalmente informação dada pelo web server sobre como a página web deve ser entregue, X-UA-Compatible, especifiquem qual versão do Internet Explorer deve ser usada para exibir a página, mesmo que o usuário tenha uma versão mais antiga do navegador,
+
+    content(atributo), usado para fornecer os valores relacionados ao atributo http-equiv ou name, pode ser associado ao elemento <meta>,  ie=edge, Renderizará com o modo mais alto suportado pelo navegador, se o usuário estiver usando o Internet Explorer 10 ele vai forçar renderizar como Internet Explorer 10, mesmo que esteja com um DOCTYPE não suportado,
+    
+    X-UA-Compatible com o valor IE=edge ele vai forçar o navegador renderizar com o modo mais recente do navegador atual (instalado na máquina do usuário) -->
+    <title>pro-calculator</title>
+</head>
+<link rel="stylesheet" href="pro-calculator.css">
+<body> <!-- corpo -->
+    <main class="main"> <!-- define o conteúdo principal dentro do <body>, class(atributo classe), especifica um ou mais nomes de classe para um elemento, classes são usadas por CSS e JavaScript para selecionar e acessar elementos específicos, main(name) -->
+        <div class="wrapper">
+            <div class="screen"> <!-- div(área de divisão da página), class(atributo classe), especifica um ou mais nomes de classe para um elemento, classes são usadas por CSS e JavaScript para selecionar e acessar elementos específicos, screen(name, tela) -->
+                <div id="screen-top"></div> 
+                <div id="screen-bottom">0</div> <!-- div(área de divisão da página) com id(identificação), para a format no css -->
+            </div>
+            <div class="calculator-buttons"> <!-- div(área de divisão da página), class(atributo classe), especifica um ou mais nomes de classe para um elemento, classes são usadas por CSS e JavaScript para selecionar e acessar elementos específicos, calculator-buttons(name, calcular-botões) -->
+                <div class="colums">
+                    <button class="btn" id="number">7</button>
+                    <button class="btn" id="number">8</button>
+                    <button class="btn" id="number">9</button>
+                    <button class="btn black" id="opKey">+</button>
+                    <!-- button(botão), botão clicável, class(atributo classe), especifica um ou mais nomes de classe para um elemento, classes são usadas por CSS e JavaScript para selecionar e acessar elementos específicos, btn-black(name),
+                    
+                    id(identificador) number(núnmero) or opKey(name) -->
+                </div>
+                <div class="colums">
+                    <button class="btn" id="number">4</button>
+                    <button class="btn" id="number">5</button>
+                    <button class="btn" id="number">6</button>
+                    <button class="btn black" id="opKey">-</button>
+                </div>
+                <div class="colums">
+                    <button class="btn" id="number">1</button>
+                    <button class="btn" id="number">2</button>
+                    <button class="btn" id="number">3</button>
+                    <button class="btn black" id="opKey">*</button>
+                </div>
+                <div class="colums"> <!-- div(área de divisão da página),
+
+                class(atributo classe), especifica um ou mais nomes de classe para um elemento, classes são usadas por CSS e JavaScript para selecionar e acessar elementos específicos, colums(name, columas) -->
+                    <button style="background-color: red; color: white;" id="clear" class="btn">c</button>
+                    <button class="btn" id="number">0</button>
+                    <button style="background-color: red; font-size: 1.4rem; color: white;" id="delete" class="btn">&#8592;</button> <!-- button(botão), botão clicável, style(atributo), para adicionar estilos a um elemento, como cor, fonte, tamanho and etc,  background-color(cor de fundo) red(vermelho), font-size(tamanho the font), color(cor) white(branco), id(identificador) delete(name, deletar),
+
+                    class(atributo classe), especifica um ou mais nomes de classe para um elemento, classes são usadas por CSS e JavaScript para selecionar e acessar elementos específicos, btn(name) -->
+                    <button class="btn black" id="opKey">/</button> <!-- button(botão), botão clicável, class(atributo classe), especifica um ou mais nomes de classe para um elemento, classes são usadas por CSS e JavaScript para selecionar e acessar elementos específicos, btn black(name), id(identificador) opKey(name) -->
+                </div>
+                <div class="colums">
+                    <button style="width: 100%;" class="btn black" id="equal">=</button> <!-- button(botão), botão clicável, style(atributo), para adicionar estilos a um elemento, como cor, fonte, tamanho and etc, width(largura),
+                    
+                    class(atributo classe), especifica um ou mais nomes de classe para um elemento, classes são usadas por CSS e JavaScript para selecionar e acessar elementos específicos, id(identificador) equal(name) --->
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="pro-calculator.js"> /* linguagem desse script que será carregador é em JavaScript", src(source, origem, é o caminho da image) pro-calculator.js(name the file) */ </script>
+    <script>
+        let p = ''; /* let(declara uma variável local no escopo do bloco atual) p(name the variável) começa vazio */
+        if (p === 'd' || p === 'f' || p === 'g') { /* if(se) p(variável) ===(igual) d ||(ou) p(variável) ===(igual) f ||(ou) p(variável) ===(igual) g */
+            console.log('true'); /* console.log, escreva para o console, console(fornece acesso ao console de debug do navegador), log(método escreve (logs) uma mensagem para o console) */
+        } else { /* else(se não) */
+            console.log('false');
+        }
+    </script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"> /* linguagem desse script que será carregador é em JavaScript", src(source, origem, é o caminho da image) ./script.js(name the file) */ </script>
+</body>
+</html>
